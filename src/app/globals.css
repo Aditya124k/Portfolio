@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030303;
+  --foreground: #f8fafc;
+  --accent-cyan: #06b6d4;
+  --accent-gold: #fbbf24;
+  --accent-purple: #8b5cf6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-purple: var(--accent-purple);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Premium Glassmorphism */
+.glass-panel {
+  background: rgba(10, 10, 15, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-glow-cyan {
+  background: rgba(10, 15, 25, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(6, 182, 212, 0.1);
+}
+
+.glass-panel-glow-gold {
+  background: rgba(20, 15, 10, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(251, 191, 36, 0.1);
+}
+
+/* Glowing text effects */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5), 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+/* Timeline vertical line glow */
+.timeline-line-glow {
+  box-shadow: 0 0 15px #06b6d4, 0 0 30px rgba(6, 182, 212, 0.5);
+}
+
+/* Hide canvas outline focus */
+canvas {
+  outline: none;
+}
